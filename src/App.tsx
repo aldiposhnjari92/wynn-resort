@@ -1,8 +1,7 @@
+
 function App() {
   return (
-    <>
-      <h1>wynn-resort</h1>
-    </>
+    <div>Main app page</div>
   )
 }
 
