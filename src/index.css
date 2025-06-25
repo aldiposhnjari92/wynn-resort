@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #006F62;
+  --color-accent: #5A3A27;
+  --color-body: #F7F7F7;
+}
+
+body {
+    @apply bg-body h-screen; 
+}
