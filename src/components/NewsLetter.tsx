@@ -3,20 +3,20 @@ import Container from "./Container"
 const NewsLetter = () => {
   return (
     <section className="bg-white">
-      <Container className="py-[20px] px-4 sm:px-[70px] flex gap-4 items-center justify-between">
-        <h1>Get News & Updates</h1>
-        <div className="flex-grow flex items-center gap-4 justify-end gap-[71px]">
-          <p className="max-w-[365px]">Get latest developments and exciting news on how we are shaping the future!</p>
+      <Container className="flex flex-col lg:flex-row py-[20px] px-4 lg:px-[70px] gap-2 lg:items-center lg:justify-between">
+        <h1 className="font-heading text-[21px]">Get News & Updates</h1>
+        <div className="flex-grow flex flex-col md:flex-row items-center gap-4 md:justify-end md:gap-[71px]">
+          <p className="max-w-[365px] font-body text-secondary text-[16px] leading-[150%]">Get latest developments and exciting news on how we are shaping the future!</p>
 
-          <form className="border-2 flex-grow border-gray-200 flex items-center py-[12px] px-[20px] max-w-[530px] rounded-[4px]">
+          <form className="border-2 gap-4 flex-grow border-gray-200 flex flex-col lg:flex-row w-full lg:items-center py-[12px] px-[20px] max-w-[530px] rounded-[4px]">
             <input
               type="email"
               placeholder="Your email address"
-              className="px-4 py-2 outline-none"
+              className="p-4 outline-none text-secondary w-full bg-secondary/10 lg:bg-transparent"
             />
             <button
               type="submit"
-              className="text-[14px] text-primary font-[600] uppercase flex items-center border-2 border-primary ms-auto px-[24px] py-[14px] rounded-[4px] hover:bg-primary hover:text-white transition-colors duration-300"
+              className="news-letter-button w-full justify-center"
             >
               Join the Newsletter
             </button>

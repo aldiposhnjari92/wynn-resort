@@ -1,11 +1,34 @@
 @import "tailwindcss";
 
+/* add custom fonts */
+@font-face {
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/font-avenir-light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: BigCalson;
+  font-style: normal;
+  font-weight: 600;
+  src: url("/fonts/font-big-calson.otf") format("opentype");
+}
+
+
 @theme {
   --color-primary: #006F62;
   --color-accent: #5A3A27;
   --color-body: #F7F7F7;
+  --color-secondary: #565759;
+  --font-heading: "BigCalson"; 
+  --font-body: "Avenir";
 }
 
 body {
     @apply bg-body h-screen; 
+}
+
+.news-letter-button {
+    @apply text-[14px] text-primary cursor-pointer uppercase flex items-center border-2 border-primary ms-auto px-[24px] py-[14px] rounded-[4px] hover:bg-primary hover:text-white transition-colors duration-300 font-body py-2 px-4 rounded;
 }
