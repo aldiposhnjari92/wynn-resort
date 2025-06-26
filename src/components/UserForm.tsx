@@ -73,15 +73,14 @@ const UserForm = ({ handleStepChange, activeStep }: UserFormProps) => {
   };
 
   const handleFinish = () => {
-    alert("Finished! Submitting form...");
-    // You can add real form submit logic here
+   
   };
 
   return (
-    <form noValidate>
-      <div className="mb-4">{renderStep()}</div>
+    <form noValidate className="mt-[32px]">
+      <div className="px-4 mb-[40px]">{renderStep()}</div>
 
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between md:gap-[40px]">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between md:gap-[40px] px-4">
         {activeStep > 1 && (
           <Button className="text-primary border-primary border w-full px-[86px] py-[16px]" onClick={handleBack}>Back</Button>
         )}
