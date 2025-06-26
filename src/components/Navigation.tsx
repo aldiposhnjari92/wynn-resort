@@ -14,7 +14,7 @@ const Navigation = () => {
           <img
             src="assets/logo.svg"
             alt="Logo"
-            className="object-scale-down h-[32px]"
+            className="object-scale-down h-[40px] md:h-[55px] lg:h-[77px]"
           />
         </NavLink>
 
@@ -55,7 +55,7 @@ const Navigation = () => {
             : "opacity-0 scale-95 pointer-events-none"
         }`}
       >
-        <div className="flex flex-col items-center gap-6 py-6">
+        <div className="flex flex-col items-center gap-6 py-6 overflow-y-auto h-[calc(100vh-72px)]">
           {navigationLinks.map((link) => (
             <NavLink
               key={link.title}
