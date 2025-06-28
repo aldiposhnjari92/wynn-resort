@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 
 export type Option = {
-  label: string;  // Country name
-  value: string;  // Phone code (e.g. +49)
-  flag: string;   // Emoji or URL
+  label: string;
+  value: string;
+  flag: string;
 };
 
 let cachedCountries: Option[] | null = null;
