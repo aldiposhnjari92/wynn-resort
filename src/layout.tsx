@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 
 const RootLayout = () => {
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col h-full overflow-auto">
       <Navigation />
       <main className="flex flex-col flex-grow">
         <Outlet />

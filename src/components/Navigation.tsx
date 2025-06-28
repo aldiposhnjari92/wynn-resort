@@ -3,9 +3,11 @@ import { NavLink } from "react-router";
 import Container from "./Container";
 import { navigationLinks } from "../utilities/navigationLinks";
 import { Menu, X } from "lucide-react";
+import SelectMenu from "./ui/Select";
 
 const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const [selectedLang, setSelectedLang] = useState<string>('')
 
   return (
     <nav className="bg-white sticky top-0 z-50 px-4 lg:px-[60px] py-[24px]">
@@ -14,7 +16,7 @@ const Navigation = () => {
           <img
             src="assets/logo.svg"
             alt="Logo"
-            className="object-scale-down h-[40px] md:h-[55px] lg:h-[77px]"
+            className="object-scale-down h-[40px]"
           />
         </NavLink>
 
@@ -36,7 +38,15 @@ const Navigation = () => {
         </div>
 
         <div className="flex items-center gap-4">
-          <NavLink to="/">EN</NavLink>
+          <div className="translate-y-[8px]">
+            <SelectMenu placeholder="EN" className="w-[70px] border-0 py-0" options={[
+                { label: "EN", value: "english" },
+                { label: "DE", value: "german" },
+              ]}
+              value={selectedLang}
+              optionClassNames="text-sm p-2" 
+              onChange={(val:any) => setSelectedLang(val)} />
+          </div>
           <button
             onClick={() => setMenuOpen((prev) => !prev)}
             aria-label="Toggle menu"
