@@ -29,11 +29,12 @@ const PhoneInput: React.FC<PhoneInputProps> = ({
   const [isOpen, setIsOpen] = useState(false);
   const [search, setSearch] = useState("");
   const [selectedCountry, setSelectedCountry] = useState<Option | null>(null);
-  const [maskedValue, setMaskedValue] = useState("");
+  const [maskedValue, setMaskedValue] = useState(defaultCountryCode);
+  const [selectedCountryCode, setSelectedCountryCode] = useState<string>("")
   const menuRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const maskPattern = "({000}) - {000000000}";
+  const maskPattern = "{000000000}";
 
   const applyMask = (val: string) => {
     const masked = IMask.createMask({ mask: maskPattern });
@@ -62,6 +63,14 @@ const PhoneInput: React.FC<PhoneInputProps> = ({
       setMaskedValue(applyMask(value));
     }
   }, [value, selectedCountry]);
+
+  useEffect(() => {
+    if (!selectedCountry) {
+      setSelectedCountryCode(defaultCountryCode)
+    } else {
+      setSelectedCountryCode(selectedCountry.value);
+    }
+  }, [defaultCountryCode, selectedCountry]);
 
   const updatePhone = useCallback(
     (raw: string) => {
@@ -131,6 +140,7 @@ const PhoneInput: React.FC<PhoneInputProps> = ({
             }`}
           />
         </button>
+        <span className="absolute pl-[70px] w-[50px]">({selectedCountryCode})</span>
         <input
           ref={inputRef}
           id={name}
@@ -138,8 +148,8 @@ const PhoneInput: React.FC<PhoneInputProps> = ({
           type="text"
           inputMode="numeric"
           pattern="\d*"
-          placeholder="(___) - ____"
-          className={`${inputClasses} pl-[75px]`}
+          placeholder={"_____"}
+          className={`${inputClasses} pl-[130px]`}
           value={maskedValue}
           onChange={(e) => updatePhone(e.target.value)}
           required={required}
