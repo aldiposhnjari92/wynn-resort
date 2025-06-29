@@ -1,69 +1,79 @@
-# React + TypeScript + Vite
+# 🚀Wynn Resort Multi-Step Registration Form
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive, accessible multi-step registration form built with **React**. It includes custom input components, country code selector with flags, OTP input, and form validation using **Zod**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- Multi-step registration flow
+- Custom reusable input components
+- Phone input with country code dropdown and flag
+- 4-digit OTP input with auto-focus
+- Real-time form validation using Zod
+- Tailwind CSS for design and responsiveness
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Tech Stack & Dependencies
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+| Package             | Purpose                                                   |
+|---------------------|-----------------------------------------------------------|
+| **React**           | Core UI library                                            |
+| **Zod**             | Type-safe schema validation                                |
+| **Tailwind CSS**    | Utility-first CSS framework                                |
+| **react-imask**     | Input masking for phone numbers                            |
+| **React Router**    | Navigation between steps (optional)                        |
+| **tailwind-merge**  | Utility function to merge Tailwind CSS classes             |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+> See [`package.json`](./package.json) for the full dependency list.
+
+---
+
+## 🖼️ Screenshots
+
+### Step 1 – Personal Information
+
+![Step 1](./assets/screenshots/step1.png)
+
+---
+
+### Step 2 – Phone Verification
+
+![Step 2](./assets/screenshots/step2.png)
+
+---
+
+### OTP Input
+
+![OTP Input](./assets/screenshots/step3.png)
+
+---
+
+## 🛠️ Installation
+
+Make sure you have **Node.js (v16 or later)** and **npm** or **Yarn** installed.
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/aldiposhnjari92/wynn-resort
+cd wynn-resort
+npm install --force
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install the App
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+npm install --force
+```
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+or if you are using yarn
+```bash
+yarn install
+```
+
+### 2. Run the App
+```bash
+npm run dev
 ```
