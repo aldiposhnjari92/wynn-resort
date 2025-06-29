@@ -73,7 +73,7 @@ or if you are using yarn
 yarn install
 ```
 
-### 2. Run the App
+### 3. Run the App
 ```bash
 npm run dev
 ```
