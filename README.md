@@ -34,19 +34,19 @@ A responsive, accessible multi-step registration form built with **React**. It i
 
 ### Step 1 – Personal Information
 
-![Step 1](./assets/screenshots/step1.png)
+![Step 1](./public/assets/screenshots/step1.png)
 
 ---
 
 ### Step 2 – Phone Verification
 
-![Step 2](./assets/screenshots/step2.png)
+![Step 2](./public/assets/screenshots/step2.png)
 
 ---
 
 ### OTP Input
 
-![OTP Input](./assets/screenshots/step3.png)
+![OTP Input](./public/assets/screenshots/step3.png)
 
 ---
 
