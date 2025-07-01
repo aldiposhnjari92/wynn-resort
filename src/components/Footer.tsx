@@ -38,27 +38,27 @@ const Footer = () => {
               <ul className="flex items-center justify-between w-2/3 sm:w-full">
                 <li>
                   <NavLink to={'#facebook'} className="rounded-full h-[27px] w-[27px] bg-white flex items-center justify-center">
-                    <img src="/assets/facebook-icon.svg" />
+                    <img src="/assets/facebook-icon.svg" alt="facebook" />
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to={'#android'} className="rounded-full h-[27px] w-[27px] bg-white flex items-center justify-center">
-                    <img src="/assets/android-icon.svg" />
+                    <img src="/assets/android-icon.svg" alt="android" />
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to={'#apple'} className="rounded-full h-[27px] w-[27px] bg-white flex items-center justify-center">
-                    <img src="/assets/apple-icon.svg" />
+                    <img src="/assets/apple-icon.svg" alt="apple" />
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to={'#instagram'} className="rounded-full h-[27px] w-[27px] bg-white flex items-center justify-center">
-                    <img src="/assets/instagram-icon.svg" />
+                    <img src="/assets/instagram-icon.svg" alt="instagram" />
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to={'#x'} className="rounded-full h-[27px] w-[27px] bg-white flex items-center justify-center">
-                    <img src="/assets/x-icon.svg" />
+                    <img src="/assets/x-icon.svg" alt="x" />
                   </NavLink>
                 </li>
               </ul>
